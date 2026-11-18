@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: eaidoky
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: YT_HANDLE
+        value: eaidoky
+      # opcional: se o canal não for achado pelo @, defina o ID (UC...)
+      - key: YT_CHANNEL_ID
+        sync: false
